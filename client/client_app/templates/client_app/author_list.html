@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>All bloggers</h1>
+
+{% if author_list %}
+<ul>
+
+    {% for author in author_list %}
+    <li>
+        <a href="{% url 'blogs-by-author' author.pk %}" itemprop="author" itemscope
+            itemtype="https://schema.org/Person">{{ author }}</a>
+    </li>
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p>There are no bloggers yet.</p>
+{% endif %}
+{% endblock %}

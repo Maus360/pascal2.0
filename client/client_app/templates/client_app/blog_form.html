@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Edit {{ blog.name }}</h2>
+
+<div class="form">
+    {% autoescape off %}
+    <form action="{% url 'blog-update' blog.id %}" method="POST">
+        {% endautoescape %}
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <BR>
+        <input type="submit" value="Submit Changes" />
+    </form>
+</div>
+
+
+{% endblock %}

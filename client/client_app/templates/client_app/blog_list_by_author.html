@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% load blog_extras %}
+<h1 itemprop="author" itemtype="https://schema.org/Person">Blogger: {% blogger %}</h1>
+
+
+
+{% if blog_list %}
+<h3>Blogs list</h3>
+<ul>
+
+    {% for blog in blog_list %}
+    <li>
+        <a href="{{ blog.get_absolute_url }}" itemprop="blog" itemscope
+            itemtype="https://schema.org/Blog">{{ blog.name }}</a> ({{blog.post_date}})</a>
+    </li>
+    {% endfor %}
+
+</ul>
+
+{% else %}
+<p>This blogger hasn't posted anything yet.</p>
+{% endif %}
+{% endblock %}

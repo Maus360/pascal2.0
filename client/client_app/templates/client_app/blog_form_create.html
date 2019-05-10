@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Create blog </h2>
+
+<div class="form">
+    {% autoescape off %}
+    <form method="post">{% csrf_token %}
+        {% endautoescape %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+</div>
+
+
+{% endblock %}

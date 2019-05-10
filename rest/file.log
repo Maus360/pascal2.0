@@ -1,0 +1,1911 @@
+INFO 2019-05-03 11:28:06,307 autoreload Watching for file changes with StatReloader
+INFO 2019-05-03 11:29:26,269 autoreload Watching for file changes with StatReloader
+INFO 2019-05-03 11:29:39,507 basehttp "GET / HTTP/1.1" 200 5512
+INFO 2019-05-03 11:29:40,370 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-05-03 11:29:40,370 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-05-03 11:29:40,380 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-05-03 11:29:40,381 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-05-03 11:29:40,442 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-05-03 11:29:40,458 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-05-03 11:29:40,459 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-05-03 11:29:40,459 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-05-03 11:29:40,468 basehttp "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-05-03 11:29:40,525 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-05-03 11:29:41,330 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-05-03 11:29:42,032 log Not Found: /favicon.ico
+WARNING 2019-05-03 11:29:42,033 basehttp "GET /favicon.ico HTTP/1.1" 404 4073
+INFO 2019-05-03 11:29:46,876 basehttp "GET /user/ HTTP/1.1" 200 9588
+INFO 2019-05-03 11:29:53,805 basehttp "GET / HTTP/1.1" 200 5512
+ERROR 2019-05-03 11:29:57,152 log Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "rest_app_blog" does not exist
+LINE 1: ..."."description", "rest_app_blog"."post_date" FROM "rest_app_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "rest_app_blog" does not exist
+LINE 1: ..."."description", "rest_app_blog"."post_date" FROM "rest_app_...
+                                                             ^
+
+ERROR 2019-05-03 11:29:57,155 basehttp "GET /blog/ HTTP/1.1" 500 169621
+INFO 2019-05-03 15:36:07,220 autoreload Watching for file changes with StatReloader
+INFO 2019-05-03 15:36:31,879 autoreload Watching for file changes with StatReloader
+INFO 2019-05-03 15:36:40,900 basehttp "GET / HTTP/1.1" 200 5512
+INFO 2019-05-03 15:36:41,278 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-05-03 15:36:41,289 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-05-03 15:36:41,289 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-05-03 15:36:41,290 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-05-03 15:36:41,298 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-05-03 15:36:41,298 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-05-03 15:36:41,299 basehttp "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2019-05-03 15:36:41,311 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-05-03 15:36:41,329 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-05-03 15:36:41,344 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-05-03 15:36:41,505 basehttp "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2019-05-03 15:36:41,628 log Not Found: /favicon.ico
+WARNING 2019-05-03 15:36:41,633 basehttp "GET /favicon.ico HTTP/1.1" 404 4073
+INFO 2019-05-03 15:36:43,793 basehttp "GET /blog/ HTTP/1.1" 200 21656
+INFO 2019-05-03 15:36:54,395 basehttp "GET /author/1/ HTTP/1.1" 200 10815
+INFO 2019-05-03 15:59:46,223 basehttp "GET /user/1/ HTTP/1.1" 200 10502
+INFO 2019-05-03 15:59:46,453 basehttp "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 8192
+INFO 2019-05-03 15:59:46,462 basehttp "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-05-03 15:59:46,468 basehttp "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-05-03 15:59:46,468 basehttp "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-05-03 15:59:46,478 basehttp "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-05-03 15:59:46,478 basehttp "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-05-03 15:59:46,490 basehttp "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-05-03 15:59:46,499 basehttp "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 8192
+INFO 2019-05-03 15:59:46,499 basehttp "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 8192
+INFO 2019-05-03 15:59:46,500 basehttp "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 8192
+ERROR 2019-05-03 17:12:35,557 exception Invalid HTTP_HOST header: 'rest.by'. You may need to add 'rest.by' to ALLOWED_HOSTS.
+WARNING 2019-05-03 17:12:35,701 log Bad Request: /
+ERROR 2019-05-03 17:13:03,741 exception Invalid HTTP_HOST header: 'rest.by'. You may need to add 'rest.by' to ALLOWED_HOSTS.
+WARNING 2019-05-03 17:13:03,771 log Not Found: /static/rest_framework/js/jquery-3.3.1.min.js
+WARNING 2019-05-03 17:13:03,776 log Bad Request: /static/rest_framework/css/bootstrap-tweaks.css
+WARNING 2019-05-03 17:13:03,785 log Not Found: /static/rest_framework/css/default.css
+WARNING 2019-05-03 17:13:03,788 log Not Found: /static/rest_framework/js/ajax-form.js
+WARNING 2019-05-03 17:13:03,796 log Not Found: /static/rest_framework/js/bootstrap.min.js
+WARNING 2019-05-03 17:13:03,802 log Not Found: /static/rest_framework/css/prettify.css
+WARNING 2019-05-03 17:13:03,811 log Not Found: /static/rest_framework/js/csrf.js
+WARNING 2019-05-03 17:13:03,819 log Not Found: /static/rest_framework/css/bootstrap.min.css
+WARNING 2019-05-03 17:13:03,830 log Not Found: /static/rest_framework/js/default.js
+WARNING 2019-05-03 17:13:03,833 log Not Found: /static/rest_framework/js/prettify-min.js
+WARNING 2019-05-03 17:13:04,107 log Not Found: /static/rest_framework/js/jquery-3.3.1.min.js
+WARNING 2019-05-03 17:13:04,193 log Not Found: /static/rest_framework/js/ajax-form.js
+WARNING 2019-05-03 17:13:04,213 log Not Found: /static/rest_framework/js/csrf.js
+WARNING 2019-05-03 17:13:04,229 log Not Found: /static/rest_framework/js/bootstrap.min.js
+WARNING 2019-05-03 17:13:04,247 log Not Found: /static/rest_framework/js/prettify-min.js
+WARNING 2019-05-03 17:13:04,262 log Not Found: /static/rest_framework/js/default.js
+WARNING 2019-05-03 17:15:27,584 log Not Found: /favicon.ico
+WARNING 2019-05-03 18:53:32,776 log Not Found: /favicon.ico
+WARNING 2019-05-04 10:25:06,713 log Not Found: /favicon.ico
+WARNING 2019-05-07 13:26:21,988 log Not Found: /favicon.ico
+ERROR 2019-05-07 13:26:26,854 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 400, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 338, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 50, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 63, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'permission-detail' not found. 'permission-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 69, in __getattr__
+    return getattr(self._field, attr_name)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 550, in choices
+    return self.get_choices()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 546, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 415, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "permission-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+ERROR 2019-05-07 13:28:47,386 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 513, in to_representation
+    fields = self._readable_fields
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 1025, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 1102, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the UserSerializer serializer.",)
+WARNING 2019-05-07 14:43:24,734 log Method Not Allowed: /
+ERROR 2019-05-07 14:50:38,588 log Internal Server Error: /user/1/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "auth_user" does not exist
+LINE 1: ...user"."is_active", "auth_user"."date_joined" FROM "auth_user...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/generics.py", line 98, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/generics.py", line 21, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/shortcuts.py", line 93, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 402, in get
+    num = len(clone)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 256, in __len__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "auth_user" does not exist
+LINE 1: ...user"."is_active", "auth_user"."date_joined" FROM "auth_user...
+                                                             ^
+
+ERROR 2019-05-07 14:53:47,610 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 400, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 338, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 50, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 63, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'permission-detail' not found. 'permission-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 69, in __getattr__
+    return getattr(self._field, attr_name)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 550, in choices
+    return self.get_choices()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 546, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 415, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "permission-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+WARNING 2019-05-07 14:53:48,656 log Not Found: /favicon.ico
+ERROR 2019-05-07 14:53:52,348 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 400, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 338, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 50, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 63, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'permission-detail' not found. 'permission-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 69, in __getattr__
+    return getattr(self._field, attr_name)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 550, in choices
+    return self.get_choices()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 546, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 415, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "permission-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+ERROR 2019-05-07 14:53:56,198 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 16:14:20,703 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+WARNING 2019-05-07 17:45:15,699 log Not Found: /favicon.ico
+ERROR 2019-05-07 17:46:01,246 log Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_blog" does not exist
+LINE 1: ...og"."description", "pascal_blog"."post_date" FROM "pascal_bl...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_blog" does not exist
+LINE 1: ...og"."description", "pascal_blog"."post_date" FROM "pascal_bl...
+                                                             ^
+
+ERROR 2019-05-07 17:46:01,257 log Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_blog" does not exist
+LINE 1: ...og"."description", "pascal_blog"."post_date" FROM "pascal_bl...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_blog" does not exist
+LINE 1: ...og"."description", "pascal_blog"."post_date" FROM "pascal_bl...
+                                                             ^
+
+ERROR 2019-05-07 17:48:53,269 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 17:51:26,643 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 17:51:28,106 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 17:51:28,247 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 17:51:28,409 log Internal Server Error: /author/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/mixins.py", line 48, in list
+    return Response(serializer.data)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super(ListSerializer, self).data
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/serializers.py", line 686, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 274, in __iter__
+    self._fetch_all()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 1242, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/query.py", line 55, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "pascal_author" does not exist
+LINE 1: ...cal_author"."user_id", "pascal_author"."bio" FROM "pascal_au...
+                                                             ^
+
+ERROR 2019-05-07 17:52:08,105 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 400, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 338, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 50, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 63, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'permission-detail' not found. 'permission-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 69, in __getattr__
+    return getattr(self._field, attr_name)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 550, in choices
+    return self.get_choices()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 546, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 415, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "permission-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+INFO 2019-05-07 17:56:30,958 autoreload Watching for file changes with StatReloader
+WARNING 2019-05-07 18:00:01,799 log Not Found: /favicon.ico
+ERROR 2019-05-07 18:00:07,256 log Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BoundField' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 400, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 338, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 50, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/reverse.py", line 63, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/urls/resolvers.py", line 668, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'permission-detail' not found. 'permission-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/utils/serializer_helpers.py", line 69, in __getattr__
+    return getattr(self._field, attr_name)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 550, in choices
+    return self.get_choices()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 546, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 415, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "permission-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+WARNING 2019-05-07 18:11:29,480 log Not Found: /favicon.ico
+WARNING 2019-05-07 18:11:57,603 log Not Found: /2
+WARNING 2019-05-07 18:14:31,036 log Not Found: /2
+WARNING 2019-05-07 18:16:10,339 log Not Found: /2
+ERROR 2019-05-07 18:17:18,362 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:18:00,551 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:18:08,928 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:22:06,902 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:24:24,253 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:31:12,978 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 18:33:56,464 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:16:21,933 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:24:16,341 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:24:34,130 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:25:04,454 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:25:11,517 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:25:33,396 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:34:34,666 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:35:24,275 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:35:52,707 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:37:30,329 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-07 19:44:04,539 log Not Found: /favicon.ico
+ERROR 2019-05-07 19:45:43,448 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:46:09,320 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:50:53,536 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:52:07,793 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-07 19:53:34,811 log Bad Request: /user/
+ERROR 2019-05-07 19:58:04,691 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 19:59:42,570 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 20:01:13,501 log Internal Server Error: /user/2
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/2/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-07 20:01:52,689 log Bad Request: /user/
+WARNING 2019-05-07 20:02:13,783 log Bad Request: /user/
+ERROR 2019-05-07 20:05:37,616 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 20:05:55,680 log Internal Server Error: /user
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/user/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-07 20:20:41,249 log Not Found: /favicon.ico
+ERROR 2019-05-07 20:26:49,371 log Internal Server Error: /user/3
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/3/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 20:27:37,640 log Internal Server Error: /user/3
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/3/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2019-05-07 20:30:35,014 log Internal Server Error: /user/3
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to rest.by/user/3/?username=qwe (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-07 20:31:00,836 log Bad Request: /user/3/
+WARNING 2019-05-07 20:31:12,206 log Bad Request: /user/3/
+WARNING 2019-05-07 20:31:33,066 log Bad Request: /user/3/
+WARNING 2019-05-07 20:32:08,618 log Bad Request: /user/3/
+WARNING 2019-05-07 20:32:26,289 log Bad Request: /user/3/
+WARNING 2019-05-07 20:32:40,583 log Bad Request: /user/3/
+WARNING 2019-05-07 20:32:50,487 log Bad Request: /user/3/
+WARNING 2019-05-07 20:32:57,514 log Bad Request: /user/3/
+WARNING 2019-05-07 20:33:08,231 log Bad Request: /user/3/
+WARNING 2019-05-07 20:33:10,477 log Bad Request: /user/3/
+WARNING 2019-05-07 20:33:59,973 log Bad Request: /user/
+WARNING 2019-05-07 20:34:43,763 log Bad Request: /user/
+WARNING 2019-05-07 20:35:22,705 log Bad Request: /user/
+WARNING 2019-05-07 20:35:30,698 log Bad Request: /user/
+WARNING 2019-05-08 11:16:39,337 log Not Found: /favicon.ico
+WARNING 2019-05-08 11:16:46,648 log Bad Request: /user/2/
+WARNING 2019-05-08 11:16:53,186 log Not Found: /favicon.ico
+WARNING 2019-05-08 11:16:53,970 log Not Found: /favicon.ico
+WARNING 2019-05-08 11:24:53,595 log Bad Request: /user/
+WARNING 2019-05-08 11:25:32,802 log Not Found: /favicon.ico
+WARNING 2019-05-08 11:27:02,849 log Bad Request: /user/
+WARNING 2019-05-08 11:33:56,598 log Bad Request: /user/
+WARNING 2019-05-08 11:33:57,955 log Not Found: /favicon.ico
+WARNING 2019-05-08 11:35:12,205 log Bad Request: /user/
+WARNING 2019-05-08 11:35:44,185 log Bad Request: /user/
+WARNING 2019-05-08 11:36:29,413 log Bad Request: /user/
+WARNING 2019-05-08 11:36:56,857 log Bad Request: /user/
+WARNING 2019-05-08 11:58:47,518 log Not Found: /favicon.ico
+WARNING 2019-05-08 12:48:22,127 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:01:17,334 log Bad Request: /author/
+WARNING 2019-05-08 15:03:08,699 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:04:29,384 log Bad Request: /author/
+WARNING 2019-05-08 15:09:30,557 log Bad Request: /author/
+WARNING 2019-05-08 15:13:13,656 log Bad Request: /author/
+WARNING 2019-05-08 15:17:02,245 log Bad Request: /author/
+WARNING 2019-05-08 15:18:37,494 log Bad Request: /author/
+WARNING 2019-05-08 15:19:44,771 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:19:45,748 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:20:02,379 log Bad Request: /author/
+WARNING 2019-05-08 15:20:28,868 log Bad Request: /author/
+WARNING 2019-05-08 15:21:23,868 log Bad Request: /author/
+WARNING 2019-05-08 15:21:50,231 log Bad Request: /author/
+WARNING 2019-05-08 15:22:00,213 log Bad Request: /author/
+WARNING 2019-05-08 15:22:11,007 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:22:11,790 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:22:13,153 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:22:41,589 log Bad Request: /author/
+WARNING 2019-05-08 15:23:09,378 log Bad Request: /author/
+WARNING 2019-05-08 15:24:59,165 log Bad Request: /author/
+WARNING 2019-05-08 15:25:34,123 log Bad Request: /author/
+WARNING 2019-05-08 15:26:57,646 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:30:25,525 log Not Found: /favicon.ico
+WARNING 2019-05-08 15:36:39,447 log Not Found: /blog/None/
+WARNING 2019-05-08 15:37:16,823 log Not Found: /blog/None/
+WARNING 2019-05-08 15:39:13,863 log Not Found: /blog/None/
+WARNING 2019-05-08 15:40:27,709 log Not Found: /blog/None/
+WARNING 2019-05-08 15:40:46,460 log Not Found: /blog/None/
+WARNING 2019-05-08 15:41:03,592 log Not Found: /blog/None/
+WARNING 2019-05-08 15:41:03,598 log Bad Request: /blog/
+WARNING 2019-05-08 15:45:50,781 log Not Found: /blog/None/
+WARNING 2019-05-08 15:45:50,787 log Bad Request: /blog/
+WARNING 2019-05-08 15:46:18,003 log Not Found: /blog/None/
+WARNING 2019-05-08 15:46:18,016 log Bad Request: /blog/
+WARNING 2019-05-08 15:47:45,591 log Not Found: /blog/None/
+WARNING 2019-05-08 15:49:59,840 log Not Found: /blog/None/
+WARNING 2019-05-08 15:50:12,415 log Not Found: /blog/None/
+WARNING 2019-05-08 15:50:27,370 log Not Found: /blog/None/
+WARNING 2019-05-08 16:04:24,704 log Not Found: /blog/7/
+WARNING 2019-05-08 16:05:21,730 log Not Found: /favicon.ico
+WARNING 2019-05-08 16:05:30,833 log Not Found: /blog/7/
+WARNING 2019-05-09 07:32:00,183 log Not Found: /favicon.ico
+WARNING 2019-05-09 07:32:04,578 base Method Not Allowed (GET): /auth/
+WARNING 2019-05-09 07:32:04,579 log Method Not Allowed: /auth/
+WARNING 2019-05-09 07:33:02,790 log Forbidden (CSRF cookie not set.): /auth/
+ERROR 2019-05-09 07:33:49,868 log Internal Server Error: /auth/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view pascal.views.Auth didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-05-09 07:34:34,034 log Internal Server Error: /auth/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/generic/base.py", line 97, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/maus/bsuir/3/AiPOSiZI/pascal2.0/rest/pascal/views.py", line 40, in get
+    super(Auth, self).get(request, *args, **kwargs)
+AttributeError: 'super' object has no attribute 'get'
+WARNING 2019-05-09 07:34:56,988 base Method Not Allowed (GET): /auth/
+WARNING 2019-05-09 07:34:56,990 log Method Not Allowed: /auth/
+WARNING 2019-05-09 07:34:57,762 base Method Not Allowed (GET): /auth/
+WARNING 2019-05-09 07:34:57,763 log Method Not Allowed: /auth/
+WARNING 2019-05-09 07:34:58,359 base Method Not Allowed (GET): /auth/
+WARNING 2019-05-09 07:34:58,360 log Method Not Allowed: /auth/
+WARNING 2019-05-09 07:35:07,265 log Forbidden (CSRF cookie not set.): /auth/
+ERROR 2019-05-09 07:36:51,185 log Internal Server Error: /auth
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/utils/deprecation.py", line 93, in __call__
+    response = self.process_request(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 53, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/middleware/common.py", line 93, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to rest.by/auth/?sadasda=sdasd (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2019-05-09 07:37:09,782 log Forbidden (CSRF cookie not set.): /auth/
+WARNING 2019-05-09 07:45:36,052 log Forbidden (CSRF cookie not set.): /auth/
+ERROR 2019-05-09 07:50:45,548 log Internal Server Error: /auth/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view pascal.views.Auth didn't return an HttpResponse object. It returned None instead.
+ERROR 2019-05-09 08:05:33,950 log Internal Server Error: /auth/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/views/generic/base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 466, in raise_uncaught_exception
+    raise exc
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/maus/bsuir/3/AiPOSiZI/pascal2.0/rest/pascal/views.py", line 47, in post
+    auth(request.POST.get("username"), request.POST.get("password"))
+  File "/home/maus/bsuir/3/AiPOSiZI/pascal2.0/rest/pascal/views.py", line 60, in auth
+    raise None
+TypeError: exceptions must derive from BaseException
+WARNING 2019-05-09 08:18:58,380 log Not Found: /favicon.ico
+WARNING 2019-05-09 08:22:51,542 log Not Found: /user/None/
+WARNING 2019-05-09 08:22:59,734 log Not Found: /favicon.ico
+WARNING 2019-05-09 08:23:00,384 log Not Found: /favicon.ico
+WARNING 2019-05-09 08:23:00,872 log Not Found: /favicon.ico
+WARNING 2019-05-09 08:23:02,239 log Not Found: /favicon.ico
+WARNING 2019-05-09 08:35:34,759 log Not Found: /user/None/
+WARNING 2019-05-09 08:37:27,994 log Not Found: /user/None/
+WARNING 2019-05-09 08:38:24,435 log Not Found: /user/None/
+ERROR 2019-05-09 08:45:10,752 log Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+    self.content = self.rendered_content
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 704, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 522, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 532, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 383, in render
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/templatetags/rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/renderers.py", line 362, in render_field
+    return template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+    return self.render(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, ignore_failures=True)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/django/template/base.py", line 858, in _resolve_lookup
+    current = current()
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 222, in iter_options
+    self.get_choices(cutoff=self.html_cutoff),
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in get_choices
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 209, in <listcomp>
+    for item in queryset
+  File "/home/maus/.local/share/virtualenvs/pascal2.0-Zqa5bXWk/lib/python3.7/site-packages/rest_framework/relations.py", line 228, in display_value
+    return six.text_type(instance)
+  File "/home/maus/bsuir/3/AiPOSiZI/pascal2.0/rest/pascal/models.py", line 22, in __str__
+    return self.user.username
+AttributeError: 'NoneType' object has no attribute 'username'
+WARNING 2019-05-09 08:46:14,630 log Not Found: /blog/None/
+WARNING 2019-05-09 08:52:31,168 log Method Not Allowed: /auth/
+ERROR 2019-05-09 09:12:04,326 exception Invalid HTTP_HOST header: 'pascal.by'. You may need to add 'pascal.by' to ALLOWED_HOSTS.
+WARNING 2019-05-09 09:12:04,475 log Bad Request: /
+ERROR 2019-05-09 09:12:04,750 exception Invalid HTTP_HOST header: 'pascal.by'. You may need to add 'pascal.by' to ALLOWED_HOSTS.
+WARNING 2019-05-09 09:12:04,808 log Bad Request: /favicon.ico
+WARNING 2019-05-09 09:25:49,808 log Not Found: /user/10/
+WARNING 2019-05-09 09:28:01,113 log Not Found: /favicon.ico
+WARNING 2019-05-09 18:15:35,674 log Not Found: /blog/None/
+WARNING 2019-05-09 18:15:44,361 log Not Found: /blog/None/
+WARNING 2019-05-09 18:52:29,327 log Not Found: /blog/None/
+WARNING 2019-05-09 18:57:11,355 log Not Found: /blog/None/
+WARNING 2019-05-09 18:57:18,861 log Not Found: /blog/None/
+WARNING 2019-05-09 19:05:06,982 log Not Found: /blog/None/
+WARNING 2019-05-09 19:53:09,617 log Not Found: /blog/None/
+WARNING 2019-05-09 19:53:31,669 log Not Found: /user/None/
+WARNING 2019-05-09 19:53:53,010 log Not Found: /user/None/
+WARNING 2019-05-09 19:53:53,024 log Bad Request: /user/
+WARNING 2019-05-09 19:55:33,191 log Not Found: /blog/None/
+WARNING 2019-05-10 12:24:20,366 log Not Found: /user/None/
+WARNING 2019-05-10 12:54:31,916 log Not Found: /user/None/
+WARNING 2019-05-10 12:54:32,026 log Bad Request: /author/
+WARNING 2019-05-10 12:54:32,088 log Not Found: /user/None/
+WARNING 2019-05-10 12:54:32,107 log Bad Request: /user/
+WARNING 2019-05-10 12:54:32,114 log Bad Request: /author/
+WARNING 2019-05-10 12:56:35,324 log Not Found: /user/None/
+WARNING 2019-05-10 12:56:35,340 log Bad Request: /user/
+WARNING 2019-05-10 12:56:35,347 log Bad Request: /author/
+WARNING 2019-05-10 13:08:14,205 log Not Found: /favicon.ico
